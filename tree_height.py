@@ -24,6 +24,7 @@ def compute_height(n, parents):
     return np.max(depth)
 def main():
     choice = input("Enter F or I: ")
+    choice = choice.upper()
     if (choice == "I" ):
         n = int(input("Count: "))
         parents = list(map(int, input("Nodes: ").split()))
@@ -34,6 +35,7 @@ def main():
             n = int(file.readline().strip())
             parents = list(map(int, file.readline().strip().split()))
             height = compute_height(n, parents)
+    else: height = "Error"
 
     print(height)
 
