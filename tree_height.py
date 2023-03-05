@@ -23,9 +23,7 @@ def compute_height(n, parents):
 
     return np.max(depth)
 def main():
-   
     choice = input("Enter F or I: ")
-
     if (choice == "I" ):
         n = int(input("Count: "))
         parents = list(map(int, input("Nodes: ").split()))
@@ -42,4 +40,3 @@ def main():
 sys.setrecursionlimit(10**7)
 threading.stack_size(2**27)
 threading.Thread(target=main).start()
-main()
